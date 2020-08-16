@@ -1,5 +1,5 @@
 <div class="product-container">
-    <img src="{{product.image}}">
+    <img [src]="product.image">
     <div class="name"
          [class]="onSale ? 'onSale' : 'notOnSale' ">{{product.name + " " + product.price}}</div>
     <button (click)="addProduct()">Add to cart</button>
