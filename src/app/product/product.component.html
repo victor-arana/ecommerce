@@ -1,7 +1,7 @@
-<div class="product-container">
+<div class="product-container" [class]="onSale ? 'onSale' : 'notOnSale' ">
     <img [src]="product.image">
     <div class="name"
-         [class]="onSale ? 'onSale' : 'notOnSale' ">{{product.name}}</div>
+         >{{product.name}}</div>
          <div>$ {{product.price}}</div>
     <button (click)="addProduct()">Add to cart</button>
     <button (click)="removeProduct()"
