@@ -5,6 +5,10 @@
     display: inline-block;
 }
 
+.product-container .details {
+    text-align: center;
+}
+
 .onSale{
     background-color:lightskyblue;
 }
