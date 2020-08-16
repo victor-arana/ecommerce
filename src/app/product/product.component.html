@@ -2,8 +2,10 @@
     <img [src]="product.image">
     <div class="name">{{product.name}}</div>
     <div>$ {{product.price}}</div>
-    <button (click)="addProduct()">Add to cart</button>
-    <button (click)="removeProduct()"
-            [disabled]="quantity > 0 ? false:true">Remove from cart</button>
-    <div>Quantity = {{quantity}}</div>
+    <div>
+        <button (click)="removeProduct()"
+        [disabled]="quantity > 0 ? false:true">-</button>
+        <span>{{quantity}}</span>
+        <button (click)="addProduct()">+</button>
+    </div>
 </div>
