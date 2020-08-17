@@ -1,0 +1,13 @@
+<div class="product-container" [class]="onSale ? 'onSale' : 'notOnSale' ">
+    <img [src]="product.image">
+    <div class="details">
+        <div class="name">{{product.name}}</div>
+        <div>$ {{product.price}}</div>
+        <div>
+            <button (click)="removeProduct()"
+            [disabled]="quantity > 0 ? false:true">-</button>
+            <span>{{quantity}}</span>
+            <button (click)="addProduct()">+</button>
+        </div>
+    </div>
+</div>
