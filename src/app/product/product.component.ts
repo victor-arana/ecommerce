@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
   public product: Product;
   public onSale: boolean;
   public quantity: number;
+  public productClasses;
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class ProductComponent implements OnInit {
     this.product = new Product('Coca-cola', 10, 'assets/img/no-data.gif');
     this.onSale = true;
     this.quantity = 0;
+    this.productClasses = {
+      "onSale": this.onSale,
+      "notOnsale:": !this.onSale
+    }
   }
 
   addProduct(): void{
