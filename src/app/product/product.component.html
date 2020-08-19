@@ -1,12 +1,12 @@
-<div class="product-container" [class]="quantity > 0 ? 'onSale' : 'notOnSale'">
+<div class="product-container" [class]="product.quantity > 0 ? 'onSale' : 'notOnSale'">
     <img [src]="product.image">
     <div class="details">
         <div class="name">{{product.name}}</div>
         <div>$ {{product.price}}</div>
         <div>
             <button (click)="removeProduct()"
-                    *ngIf="quantity > 0">-</button>            
-            <span>{{quantity}}</span>
+                    *ngIf="product.quantity > 0">-</button>            
+            <span>{{product.quantity}}</span>
             <button (click)="addProduct()">+</button>
         </div>
     </div>

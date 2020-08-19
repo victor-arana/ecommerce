@@ -9,23 +9,19 @@ import { Product } from '../model/product';
 export class ProductComponent implements OnInit {
 
   public product: Product;
-  public onSale: boolean;
-  public quantity: number;
-  
+    
   constructor() { }
 
   ngOnInit(): void {
-    this.product = new Product('Coca-cola', 10, 'assets/img/no-data.gif');
-    this.onSale = true;
-    this.quantity = 1;
+    this.product = new Product('Coca-cola', 10, 'assets/img/no-data.gif', true, 1);
   }
 
   addProduct(): void{
-    this.quantity = this.quantity + 1;
+    this.product.quantity = this.product.quantity + 1;
   }
 
   removeProduct(): void{
-    this.quantity = this.quantity - 1;
+    this.product.quantity = this.product.quantity - 1;
   }
 
 

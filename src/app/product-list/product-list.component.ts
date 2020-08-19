@@ -14,8 +14,8 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = new Array<Product>(2);
-    this.products[0] = new Product('Coca-cola', 10, 'assets/img/no-data.gif');
-    this.products[1] = new Product('Mirinda', 8, 'assets/img/no-data.gif')
+    this.products[0] = new Product('Coca-cola', 10, 'assets/img/no-data.gif', true, 1);
+    this.products[1] = new Product('Mirinda', 8, 'assets/img/no-data.gif', true, 1)
   }
 
 }
