@@ -1,13 +1,16 @@
-<div class="product-container" [class]="onSale ? 'onSale' : 'notOnSale' ">
+<div class="product-container" [ngClass]="productClasses">
     <img [src]="product.image">
     <div class="details">
         <div class="name">{{product.name}}</div>
         <div>$ {{product.price}}</div>
         <div>
             <button (click)="removeProduct()"
-            [disabled]="quantity > 0 ? false:true">-</button>
+                    *ngIf="quantity > 0">-</button>            
             <span>{{quantity}}</span>
             <button (click)="addProduct()">+</button>
         </div>
     </div>
+    <select>
+        <option value="{{option}}" *ngFor="let option of options">{{option}}</option>
+    </select>
 </div>
