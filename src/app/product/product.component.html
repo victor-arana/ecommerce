@@ -1,4 +1,4 @@
-<div class="product-container" [ngClass]="productClasses">
+<div class="product-container" [class]="quantity > 0 ? 'onSale' : 'notOnSale'">
     <img [src]="product.image">
     <div class="details">
         <div class="name">{{product.name}}</div>
