@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../model/product';
 
 @Component({
@@ -6,13 +6,11 @@ import { Product } from '../model/product';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements  {
+export class ProductComponent{
 
-  public product: Product;
+  @Input() public product: Product;
     
   constructor() { }
-
-  
 
   addProduct(): void{
     this.product.quantity = this.product.quantity + 1;
