@@ -6,15 +6,13 @@ import { Product } from '../model/product';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements  {
 
   public product: Product;
     
   constructor() { }
 
-  ngOnInit(): void {
-    this.product = new Product('Coca-cola', 10, 'assets/img/no-data.gif', true, 1);
-  }
+  
 
   addProduct(): void{
     this.product.quantity = this.product.quantity + 1;
