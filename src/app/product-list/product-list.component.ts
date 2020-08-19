@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../model/product';
 
 @Component({
   selector: 'app-product-list',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
+  public products: Array<Product>;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.products = new Array<Product>(2);
+    this.products[0] = new Product('Coca-cola', 10, 'assets/img/no-data.gif');
+    this.products[1] = new Product('Mirinda', 8, 'assets/img/no-data.gif')
   }
 
 }
