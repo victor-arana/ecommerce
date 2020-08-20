@@ -1,23 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '../model/product';
+import { ProductQuantityChange } from '../model/product-quantity-change';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent{
 
   @Input() public product: Product;
+  @Output() private quantityChange: EventEmitter<ProductQuantityChange> = new EventEmitter();
     
   constructor() { }
 
   addProduct(): void{
-    this.product.quantity = this.product.quantity + 1;
+    this.quantityChange.emit({product: this.product, changeInQuantity: 1});
   }
 
   removeProduct(): void{
-    this.product.quantity = this.product.quantity - 1;
+    this.quantityChange.emit({product: this.product, changeInQuantity: -1});
   }
 
 

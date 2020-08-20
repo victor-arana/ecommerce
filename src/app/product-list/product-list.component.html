@@ -1,1 +1,3 @@
-<app-product [product]="product" *ngFor="let product of products"></app-product>
+<app-product [product]="product"
+             (quantityChange)="onQuantityChange($event)"
+              *ngFor="let product of products"></app-product>
