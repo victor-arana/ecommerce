@@ -1,30 +1,31 @@
 <h2>Create product</h2>
 
 <div class="form-group">
-    <form>
+    <form (ngSubmit)="createProduct()">
         <div class="product-name">
             <input type="text"
                     placeholder="Product Name"
-                    [value]="product.name"
-                    (input)="product.name=$event.target.value"> 
+                    name="productName"
+                    [(ngModel)]="product.name"> 
         </div>
         <div class="product-price">
             <input  type="number"
+                    name="productPrice"
                     placeholder="Product Price"
-                    [value]="product.price"
-                    (input)="product.price=$event.target.value">
+                    [(ngModel)]="product.price">
         </div>
         <div class="product-image-url">
             <input  type="text"
+                    name="productImageURL"
                     placeholder="Product image URL"
-                    [value]="product.image"
-                    (input)="product.image=$event.target.value">
+                    [(ngModel)]="product.image">
         </div>
         <div class="is-on-sale">
             <input type="checkbox"
-                   [checked]="product.isOnSale"
-                   (input)="product.isOnSale=$event.target.checked" >Is on sale
+                    name="productIsOnSale"
+                   [(ngModel)]="product.isOnSale">Is on sale
         </div>
+        <button type="submit">Create</button>
     </form>
 </div>
 

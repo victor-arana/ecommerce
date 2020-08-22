@@ -13,4 +13,8 @@ export class CreateProductComponent {
     this.product = new Product(1,"The bends", 1, "assets/img/no-data.gif", true, 1);
   }
 
+  createProduct(){
+    console.log("Creating product");
+  }
+
 }
