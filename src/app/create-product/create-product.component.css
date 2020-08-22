@@ -1,0 +1,19 @@
+.product-name .ng-valid,
+.product-name .ng-prinstine,
+.product-name .ng-untouched{
+    background-color: lightgreen;
+}
+
+.product-name .ng-dirty{
+    background-color: lightsteelblue;
+}
+
+.product-name .ng-touched{
+    background-color: powderblue;
+}
+
+.product-name .ng-invalid{
+    background-color: red;
+}
+
+

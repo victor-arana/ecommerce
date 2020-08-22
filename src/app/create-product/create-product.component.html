@@ -4,19 +4,23 @@
     <form (ngSubmit)="createProduct()">
         <div class="product-name">
             <input type="text"
-                    placeholder="Product Name"
+                    required
                     name="productName"
+                    placeholder="Product Name"
                     [(ngModel)]="product.name"> 
         </div>
         <div class="product-price">
             <input  type="number"
+                    required
                     name="productPrice"
                     placeholder="Product Price"
                     [(ngModel)]="product.price">
         </div>
         <div class="product-image-url">
             <input  type="text"
+                    required
                     name="productImageURL"
+                    pattern="^http(s?)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$"
                     placeholder="Product image URL"
                     [(ngModel)]="product.image">
         </div>
