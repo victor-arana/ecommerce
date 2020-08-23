@@ -6,8 +6,12 @@
             <input type="text"
                     required
                     name="productName"
+                    #productName="ngModel"
                     placeholder="Product Name"
                     [(ngModel)]="product.name"> 
+        </div>
+        <div *ngIf="productName.errors && productName.errors.required">
+            Product name is mandatory
         </div>
         <div class="product-price">
             <input  type="number"
